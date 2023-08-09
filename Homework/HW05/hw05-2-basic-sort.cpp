@@ -42,11 +42,7 @@ int main() {
 			printf( "%d %d %d ",Num3,Num2,Num1) ;
 		}else if( Num3 < Num1 && Num1 < Num2 ) {
 			printf( "%d %d %d ",Num3,Num1,Num2) ;
-		}
-		else {
-			printf( "please enter number only." ) ;
-			}//end if
-	return 0 ;
-	}
+		}//end if
+	}//end fuaction
     
 }
