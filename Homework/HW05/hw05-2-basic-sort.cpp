@@ -30,20 +30,23 @@ int main() {
     scanf( "%d",&Num2) ;
     printf( "Input[3] : " ) ;
     scanf( "%d",&Num3) ;
-	if( Num1 < Num2 < Num3 ) {
+	if( Num1 < Num2 && Num2 < Num3 ){
 		printf( "%d %d %d ",Num1,Num2,Num3) ;
-		}else if( Num1 < Num3 < Num2 ) {
-		printf( "%d %d %d ",Num1,Num3,Num2) ;
-		}else if( Num2 < Num1 < Num3 ) {
-		printf( "%d %d %d ",Num2,Num1,Num3) ;
-		}else if( Num2 < Num3 < Num1 ) {
-		printf( "%d %d %d ",Num2,Num3,Num1) ;
-		}else if( Num3 < Num2 < Num1 ) {
-		printf( "%d %d %d ",Num3,Num2,Num1) ;
-		}else if( Num3 < Num1 < Num2 ) {
-		printf( "%d %d %d ",Num3,Num1,Num2) ;
-	}//end if
-		else {printf( "please enter number only." ) ;
+		}else if( Num1 < Num3 && Num3 < Num2 ) {
+			printf( "%d %d %d ",Num1,Num3,Num2) ;
+		}else if( Num2 < Num1 && Num1 < Num3 ) {
+			printf( "%d %d %d ",Num2,Num1,Num3) ;
+		}else if( Num2 < Num3 && Num3 < Num1 ) {
+			printf( "%d %d %d ",Num2,Num3,Num1) ;
+		}else if( Num3 < Num2 && Num2 < Num1 ) {
+			printf( "%d %d %d ",Num3,Num2,Num1) ;
+		}else if( Num3 < Num1 && Num1 < Num2 ) {
+			printf( "%d %d %d ",Num3,Num1,Num2) ;
 		}
-    return 0 ;
+		else {
+			printf( "please enter number only." ) ;
+			}//end if
+	return 0 ;
+	}
+    
 }
