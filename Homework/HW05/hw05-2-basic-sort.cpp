@@ -44,5 +44,3 @@ int main() {
 			printf( "%d %d %d ",Num3,Num1,Num2) ;
 		}//end if
 	}//end fuaction
-    
-}
