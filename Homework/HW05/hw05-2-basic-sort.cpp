@@ -24,7 +24,7 @@
 #include <stdio.h>
 
 int main() {
-    int Num1, Num2, Num3;
+    int Num1, Num2, Num3, positionmax, positionmid, positionmin ;
     printf("Input[1] : ");
     scanf("%d", &Num1);
     printf("Input[2] : ");
@@ -32,19 +32,40 @@ int main() {
     printf("Input[3] : ");
     scanf("%d", &Num3);
 
-    if (Num1 < Num2 && Num2 < Num3) {
-        printf("%d %d %d", Num1, Num2, Num3);
-    } else if (Num1 < Num3 && Num3 < Num2) {
-        printf("%d %d %d", Num1, Num3, Num2);
-    } else if (Num2 < Num1 && Num1 < Num3) {
-        printf("%d %d %d", Num2, Num1, Num3);
-    } else if (Num2 < Num3 && Num3 < Num1) {
-        printf("%d %d %d", Num2, Num3, Num1);
-    } else if (Num3 < Num2 && Num2 < Num1) {
-        printf("%d %d %d", Num3, Num2, Num1);
-    } else if (Num3 < Num1 && Num1 < Num2) {
-        printf("%d %d %d", Num3, Num1, Num2);
+    if (Num1 > Num2 && Num1 > Num3) {
+        positionmax = Num1 ;
+        if ( Num2 > Num3) {
+            positionmid = Num2 ;
+            positionmin = Num3 ;
+        }//endif
+        else {
+            positionmid = Num3 ;
+            positionmin = Num2 ;
+        }//endelse
     }
-
-    return 0;
+    else if ( Num2 > Num1 && Num2 > Num3 ){
+        positionmax = Num2 ;
+         if ( Num1 > Num3) {
+            positionmid = Num1 ;
+            positionmin = Num3 ;
+        }//endif
+        else {
+            positionmid = Num3 ;
+            positionmin = Num1 ;
+        }//endelse
+    }
+    else {
+        positionmax = Num3 ;
+        if ( Num1 > Num2 ) {
+            positionmid = Num1 ;
+            positionmin = Num2 ;
+        }//end if
+        else {
+            positionmid = Num2 ;
+            positionmin = Num1 ;
+        }//end else
+    }
+    
+    printf("%d %d %d\n", positionmax, positionmid, positionmin);
+    return 0 ;
 }
